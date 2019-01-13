@@ -37,7 +37,6 @@ exports = module.exports = function (isExit) {
 
                     axios.get(`http://localhost:3001/insert/${reqUuid}`)
                         .then(res => {
-                            console.log(reqUuid, res);
                             if (res.data.resultCode !== 2) {
                                 req.context.isWaiting = true;
                             }
